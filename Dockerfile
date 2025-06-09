@@ -1,9 +1,10 @@
-FROM python:3.12
+FROM python:3.11
 
 WORKDIR /app
-COPY . /app
 
-RUN pip install -U pip uv
-RUN uv pip install --system --no-cache-dir -r requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
 
 CMD ["bash", "surf-tg.sh"]
