@@ -1,1 +1,1 @@
-web: bash surf-tg.sh
+worker: bash surf-tg.sh
