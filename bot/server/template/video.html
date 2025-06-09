@@ -118,6 +118,8 @@
         <div onclick="mx_player()" class="btn btn-primary">MX Player</div>
         <div onclick="vlc_player()" class="btn btn-primary">VLC Mobile</div>
         <div onclick="km_player()" class="btn btn-primary">KM Player</div>
+        <div onclick="s_player()" class="btn btn-primary">S Player</div>
+        <div onclick="playit_player()" class="btn btn-primary">Playit Player</div>
         <div onclick="get_file()" class="btn btn-primary">Get File</div>
         <div onclick="copyUrl()" class="btn btn-primary">Copy Url</div>
         <div onclick="download()" class="btn btn-primary">Download</div>
@@ -169,6 +171,18 @@
         const openKmplayer = `intent:${openDownloadLink}#Intent;package=com.kmplayer;end`;
         window.location.href = openKmplayer;
     }
+    	function s_player() {
+            const openDownloadLink = downloadlink;
+            const openSplayer = `intent:${openDownloadLink}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
+            window.location.href = openSplayer;
+        }
+
+    function playit_player() {
+    	const openDownloadLink = downloadlink;
+    	const openPlayit = `playit://playerv2/video?url=${openDownloadLink}`;
+   	 window.location.href = openPlayit;
+	}
+	    
     function download() {
         const openDownloadLink = downloadlink;
         window.location.href = openDownloadLink;
